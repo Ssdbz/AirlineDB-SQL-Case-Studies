@@ -10,8 +10,8 @@ Concepts Used:
 - COUNT()
 */
 
-SELECT COUNT(DISTINCT t.ticket_no) AS tickets_without_boarding_pass
-FROM tickets t
-LEFT JOIN boarding_passes bp
-ON t.ticket_no = bp.ticket_no
-WHERE bp.boarding_no IS NULL;
+SELECT coun(distinct t.ticket_no)
+from tickets t
+left join boarding_passes bp 
+on t.ticket_no = bp.ticket_no
+where bp.boarding_passes is null;
